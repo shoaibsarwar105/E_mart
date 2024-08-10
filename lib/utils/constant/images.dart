@@ -35,5 +35,8 @@ class BImages {
   static const String tShirt  = "assets/icons/CategoriesIcon/tshirt1.png";
   static const String waTchs  = "assets/icons/CategoriesIcon/watchs1.png";
 
-
+// onboarding images
+  static const String promoBanner1 = "assets/images/banners/promo_banner_1.webp";
+  static const String promoBanner2  = "assets/images/banners/promo_banner_2.jpg";
+  static const String promoBanner3  = "assets/images/banners/promo_banner_3.jpg";
 }
