@@ -1,9 +1,10 @@
+import 'package:beautybonenza/common/custom_shapes/Containers/circular_container.dart';
 import 'package:beautybonenza/features/shop/screens/home_screen/widgets/home_appbar.dart';
 import 'package:beautybonenza/features/shop/screens/home_screen/widgets/home_categories.dart';
-import 'package:beautybonenza/utils/constant/colors.dart';
+import 'package:beautybonenza/features/shop/screens/home_screen/widgets/promo_slider.dart';
 import 'package:beautybonenza/utils/constant/images.dart';
 import 'package:beautybonenza/utils/constant/sizes.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import '../../../../common/custom_shapes/Containers/primary_header_container.dart';
 import '../../../../common/custom_shapes/Containers/search_Container.dart';
@@ -63,7 +64,7 @@ class HomeScreen extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.all(BSizes.defaultsSpace),
-              child: BRoundedImage(imageUrl: BImages.promoBanner1,),
+              child: BPromoSlider(),
             )
           ],
         ),
@@ -71,4 +72,5 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
 
