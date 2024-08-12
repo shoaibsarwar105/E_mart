@@ -7,14 +7,13 @@ import 'package:get/get.dart';
 import '../../../../../common/custom_shapes/Containers/circular_container.dart';
 import '../../../../../common/widgets/Images/b_rounded_image.dart';
 import '../../../../../utils/constant/colors.dart';
-import '../../../../../utils/constant/images.dart';
 import '../../../../../utils/constant/sizes.dart';
 
 class BPromoSlider extends StatelessWidget {
   const BPromoSlider({
-    super.key,
+    super.key, required this.banners,
   });
-
+final List<String> banners;
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(HomeController());
@@ -25,17 +24,7 @@ class BPromoSlider extends StatelessWidget {
               viewportFraction: 1,
               onPageChanged: (index, _) =>
                   controller.updatePageIndicator(index)),
-          items: const [
-            BRoundedImage(
-              imageUrl: BImages.promoBanner1,
-            ),
-            BRoundedImage(
-              imageUrl: BImages.promoBanner1,
-            ),
-            BRoundedImage(
-              imageUrl: BImages.promoBanner1,
-            )
-          ],
+          items: banners.map((url)=>BRoundedImage(imageUrl: url)).toList(),
         ),
         const SizedBox(
           height: BSizes.spaceBtwItems,
@@ -44,7 +33,7 @@ class BPromoSlider extends StatelessWidget {
           child: Obx(
             () => Row(mainAxisSize: MainAxisSize.min,
               children: [
-                for (int i = 0; i < 3; i++)
+                for (int i = 0; i < banners.length; i++)
                   BCircularContainer(
                     width: 20,
                     height: 4,
