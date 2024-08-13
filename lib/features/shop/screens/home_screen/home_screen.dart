@@ -61,11 +61,18 @@ class HomeScreen extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.all(BSizes.defaultsSpace),
-              child: BPromoSlider(
-                banners: [
-                  BImages.promoBanner1,
-                  BImages.promoBanner2,
-                  BImages.promoBanner3,
+              child: Column(
+                children: [
+                  /// -- promo slider--
+                  BPromoSlider(
+                    banners: [
+                      BImages.promoBanner1,
+                      BImages.promoBanner2,
+                      BImages.promoBanner3,
+                    ],
+                  ),
+                  /// -- popular products--
+
                 ],
               ),
             )
