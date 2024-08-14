@@ -1,3 +1,4 @@
+import 'package:beautybonenza/common/widgets/products/products_cards/product_card_vertical.dart';
 import 'package:beautybonenza/features/shop/screens/home_screen/widgets/home_appbar.dart';
 import 'package:beautybonenza/features/shop/screens/home_screen/widgets/home_categories.dart';
 import 'package:beautybonenza/features/shop/screens/home_screen/widgets/promo_slider.dart';
@@ -71,8 +72,10 @@ class HomeScreen extends StatelessWidget {
                       BImages.promoBanner3,
                     ],
                   ),
-                  /// -- popular products--
+                  SizedBox(height: BSizes.spaceBtwSections,),
 
+                  /// -- popular products--
+                  BProductCardVertical()
                 ],
               ),
             )

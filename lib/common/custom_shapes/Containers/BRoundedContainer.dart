@@ -1,4 +1,5 @@
 import 'package:beautybonenza/utils/constant/colors.dart';
+
 import 'package:flutter/material.dart';
 
 import '../../../utils/constant/sizes.dart';
@@ -29,6 +30,7 @@ class BRoundedContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return Container(
       width: width,
       height: height,
