@@ -4,9 +4,11 @@ import 'package:beautybonenza/features/shop/screens/home_screen/widgets/home_cat
 import 'package:beautybonenza/features/shop/screens/home_screen/widgets/promo_slider.dart';
 import 'package:beautybonenza/utils/constant/images.dart';
 import 'package:beautybonenza/utils/constant/sizes.dart';
+
 import 'package:flutter/material.dart';
 import '../../../../common/custom_shapes/Containers/primary_header_container.dart';
 import '../../../../common/custom_shapes/Containers/search_Container.dart';
+import '../../../../common/widgets/layouts/grid_layout.dart';
 import '../../../../common/widgets/text/section_heading.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -14,12 +16,12 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return  Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
             /// --Header--
-            BPrimaryHeaderContainer(
+            const BPrimaryHeaderContainer(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -61,21 +63,23 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.all(BSizes.defaultsSpace),
+              padding: const EdgeInsets.all(BSizes.defaultsSpace),
               child: Column(
                 children: [
                   /// -- promo slider--
-                  BPromoSlider(
+                  const BPromoSlider(
                     banners: [
                       BImages.promoBanner1,
                       BImages.promoBanner2,
                       BImages.promoBanner3,
                     ],
                   ),
-                  SizedBox(height: BSizes.spaceBtwSections,),
+                  const SizedBox(
+                    height: BSizes.spaceBtwSections,
+                  ),
 
                   /// -- popular products--
-                  BProductCardVertical()
+                  BGridLayout(itemCount: 8, itemBuilder: (_,index ) => const BProductCardVertical()),
                 ],
               ),
             )
@@ -85,3 +89,5 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
+

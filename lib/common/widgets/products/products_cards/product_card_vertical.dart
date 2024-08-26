@@ -1,5 +1,6 @@
 import 'package:beautybonenza/common/custom_shapes/Containers/BRoundedContainer.dart';
 import 'package:beautybonenza/common/widgets/Images/b_rounded_image.dart';
+import 'package:beautybonenza/common/widgets/pricetitle/price_title.dart';
 import 'package:beautybonenza/utils/constant/colors.dart';
 import 'package:beautybonenza/utils/constant/images.dart';
 import 'package:beautybonenza/utils/helpers/helper_functions.dart';
@@ -110,12 +111,7 @@ class BProductCardVertical extends StatelessWidget {
                   Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       ///price
-                      Text(
-                        '\$35.5',
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        style: Theme.of(context).textTheme.headlineMedium,
-                      ),
+                      const BProductPriceText(price: '35.5'),
                       Container(
                         decoration: const BoxDecoration(
                             color: BColors.dark,
