@@ -19,7 +19,8 @@ class BProductCardVertical extends StatelessWidget {
     final dark = BHelperFunction.isDark(context);
 
     /// container with side padding ,color , edges, radius and shadow.
-    return GestureDetector(onTap: (){},
+    return GestureDetector(
+      onTap: () {},
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),
@@ -108,31 +109,37 @@ class BProductCardVertical extends StatelessWidget {
                       )
                     ],
                   ),
-                  Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      ///price
-                      const BProductPriceText(price: '35.5'),
-                      Container(
-                        decoration: const BoxDecoration(
-                            color: BColors.dark,
-                            borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(BSizes.cardRadiusMd),
-                                bottomRight:
-                                    Radius.circular(BSizes.productImageRadius))),
-                        child: const SizedBox(
-                            width: BSizes.iconLg * 1.2,
-                            height: BSizes.iconLg * 1.2,
-                            child: Center(
-                              child: Icon(
-                                Iconsax.add,
-                                color: BColors.white,
-                              ),
-                            )),
-                      )
-                    ],
-                  )
+
                 ],
               ),
+            ),
+            Spacer(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                ///price
+                const Padding(
+                  padding: EdgeInsets.only(left: 8.0),
+                  child: BProductPriceText(price: '35.5'),
+                ),
+                Container(
+                  decoration: const BoxDecoration(
+                      color: BColors.dark,
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(BSizes.cardRadiusMd),
+                          bottomRight: Radius.circular(
+                              BSizes.productImageRadius))),
+                  child: const SizedBox(
+                      width: BSizes.iconLg * 1.2,
+                      height: BSizes.iconLg * 1.2,
+                      child: Center(
+                        child: Icon(
+                          Iconsax.add,
+                          color: BColors.white,
+                        ),
+                      )),
+                )
+              ],
             )
           ],
         ),

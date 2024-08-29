@@ -78,6 +78,10 @@ class HomeScreen extends StatelessWidget {
                     height: BSizes.spaceBtwSections,
                   ),
 
+                  ///-- heading
+                 BSectionHeading(title: 'Popular Products',onPressed: (){},),
+                  const SizedBox(height: BSizes.spaceBtwItems,),
+
                   /// -- popular products--
                   BGridLayout(itemCount: 8, itemBuilder: (_,index ) => const BProductCardVertical()),
                 ],
