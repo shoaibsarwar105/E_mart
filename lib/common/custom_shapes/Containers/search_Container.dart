@@ -14,19 +14,22 @@ class BSearchContainer extends StatelessWidget {
     this.showBackground = true,
     this.showBorder = true,
     this.onTap,
+    this.padding = const EdgeInsets.symmetric(horizontal: BSizes.defaultsSpace),
   });
 
   final String text;
   final IconData? icon;
   final bool showBackground, showBorder;
   final void Function()? onTap;
+  final EdgeInsetsGeometry padding;
 
   @override
   Widget build(BuildContext context) {
     final dark = BHelperFunction.isDark(context);
-    return GestureDetector( onTap:onTap ,
+    return GestureDetector(
+      onTap: onTap,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: BSizes.defaultsSpace),
+        padding: padding,
         child: Container(
           width: BDeviceUtils.getScreenWidth(context),
           padding: const EdgeInsets.all(BSizes.md),

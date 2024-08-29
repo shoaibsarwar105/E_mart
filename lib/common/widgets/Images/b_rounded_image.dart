@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 
-import '../../../utils/constant/colors.dart';
+
 import '../../../utils/constant/sizes.dart';
 
 class BRoundedImage extends StatelessWidget {

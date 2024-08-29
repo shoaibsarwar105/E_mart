@@ -1,5 +1,6 @@
 
 import 'package:beautybonenza/features/shop/screens/home_screen/home_screen.dart';
+import 'package:beautybonenza/features/shop/screens/store/store_screen.dart';
 import 'package:beautybonenza/utils/constant/colors.dart';
 import 'package:beautybonenza/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
@@ -103,9 +104,7 @@ class Navigation_controller extends GetxController {
   var selectedIndex = 0.obs;
   final Screens = [
    const HomeScreen(),
-    Container(
-      color: Colors.red,
-    ),
+   const StoreScreen(),
     Container(
       color: Colors.green,
     ),

@@ -15,7 +15,7 @@ class BGridLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.builder(padding: EdgeInsets.zero,
-        itemCount: itemCount,
+        itemCount: itemCount,physics: const NeverScrollableScrollPhysics(),
         shrinkWrap: true,
         gridDelegate:
           SliverGridDelegateWithFixedCrossAxisCount(
