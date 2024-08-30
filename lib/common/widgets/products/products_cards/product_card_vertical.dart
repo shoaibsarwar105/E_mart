@@ -9,6 +9,7 @@ import 'package:iconsax/iconsax.dart';
 import '../../../../utils/constant/sizes.dart';
 import '../../../styles/shadows.dart';
 import '../../icons/b-circular_icon.dart';
+import '../../text/b_brand_title_text_with_verified_icon.dart';
 import '../../text/product_title_text.dart';
 
 class BProductCardVertical extends StatelessWidget {
@@ -79,36 +80,19 @@ class BProductCardVertical extends StatelessWidget {
             ),
 
             ///  -- Details
-            Padding(
-              padding: const EdgeInsets.only(left: BSizes.sm),
+            const Padding(
+              padding: EdgeInsets.only(left: BSizes.sm),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const BProductTitleText(
+                  BProductTitleText(
                     title: 'Baby CARE Instruments',
                     smallSize: true,
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: BSizes.spaceBtwItems / 2,
                   ),
-                  Row(
-                    children: [
-                      Text(
-                        'Brand',
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
-                        style: Theme.of(context).textTheme.labelMedium,
-                      ),
-                      const SizedBox(
-                        width: BSizes.xs,
-                      ),
-                      const Icon(
-                        Iconsax.verify5,
-                        color: BColors.primary,
-                        size: BSizes.iconXs,
-                      )
-                    ],
-                  ),
+                  BBrandTitleWithVerifiedIcon(title: 'Brand Name', ),
 
                 ],
               ),
@@ -147,3 +131,5 @@ class BProductCardVertical extends StatelessWidget {
     );
   }
 }
+
+
