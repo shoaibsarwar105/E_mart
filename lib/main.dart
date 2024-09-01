@@ -17,7 +17,7 @@ void main(){
 
 
 
-  runApp(MyApp());
+  runApp(const MyApp());
 
 
 }
@@ -32,6 +32,6 @@ class MyApp extends StatelessWidget {
         theme: AppTheme.lightTheme,
         darkTheme: AppTheme.darkTheme,
 
-    home: OnBoardingScreen(),);
+    home: const OnBoardingScreen(),);
   }
 }

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-import '../../../../common/custom_shapes/Containers/BRoundedContainer.dart';
-import '../../../../common/widgets/Images/b_circular_image.dart';
-import '../../../../common/widgets/text/b_brand_title_text_with_verified_icon.dart';
-import '../../../../utils/constant/colors.dart';
-import '../../../../utils/constant/enums.dart';
-import '../../../../utils/constant/images.dart';
-import '../../../../utils/constant/sizes.dart';
-import '../../../../utils/helpers/helper_functions.dart';
+import '../../custom_shapes/Containers/BRoundedContainer.dart';
+import '../Images/b_circular_image.dart';
+import '../text/b_brand_title_text_with_verified_icon.dart';
+import '../../../utils/constant/colors.dart';
+import '../../../utils/constant/enums.dart';
+import '../../../utils/constant/images.dart';
+import '../../../utils/constant/sizes.dart';
+import '../../../utils/helpers/helper_functions.dart';
 
 class BBrandCard extends StatelessWidget {
   const BBrandCard({

@@ -1,11 +1,10 @@
-
 import 'package:beautybonenza/common/custom_shapes/Containers/search_Container.dart';
 import 'package:beautybonenza/common/widgets/appbar/appbar.dart';
 import 'package:beautybonenza/common/widgets/layouts/grid_layout.dart';
 import 'package:beautybonenza/common/widgets/products.cart/Cart_menu_icon.dart';
 
 import 'package:beautybonenza/common/widgets/text/section_heading.dart';
-import 'package:beautybonenza/utils/constant/images.dart';
+import 'package:beautybonenza/features/shop/screens/store/widgets/category_tab.dart';
 
 import 'package:beautybonenza/utils/constant/sizes.dart';
 import 'package:beautybonenza/utils/helpers/helper_functions.dart';
@@ -13,9 +12,8 @@ import 'package:beautybonenza/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../common/widgets/appbar/tabbar.dart';
-import '../../../../common/widgets/brands/brand_show_case.dart';
 import '../../../../utils/constant/colors.dart';
-import 'brand_card.dart';
+import '../../../../common/widgets/brands/brand_card.dart';
 
 class StoreScreen extends StatelessWidget {
   const StoreScreen({super.key});
@@ -108,7 +106,8 @@ class StoreScreen extends StatelessWidget {
                     ),
                     Tab(
                       child: Text("Cosmetics"),
-                    ),Tab(
+                    ),
+                    Tab(
                       child: Text("Mobiles"),
                     ),
                   ],
@@ -118,67 +117,12 @@ class StoreScreen extends StatelessWidget {
           },
           body: const TabBarView(
             children: [
-              Padding(
-                padding: EdgeInsets.all(BSizes.defaultsSpace),
-                child: Column(
-                  children: [
-                    /// Brand
-                    BBrandShowcase(images: [BImages.product26,BImages.product28,BImages.product25],)
-
-                    /// Products
-                  ],
-                ),
-              ),  Padding(
-                padding: EdgeInsets.all(BSizes.defaultsSpace),
-                child: Column(
-                  children: [
-                    /// Brand
-                    BBrandShowcase(images: [BImages.product26,BImages.product28,BImages.product25],)
-
-                    /// Products
-                  ],
-                ),
-              ),  Padding(
-                padding: EdgeInsets.all(BSizes.defaultsSpace),
-                child: Column(
-                  children: [
-                    /// Brand
-                    BBrandShowcase(images: [BImages.product26,BImages.product28,BImages.product25],)
-
-                    /// Products
-                  ],
-                ),
-              ) , Padding(
-                padding: EdgeInsets.all(BSizes.defaultsSpace),
-                child: Column(
-                  children: [
-                    /// Brand
-                    BBrandShowcase(images: [BImages.product26,BImages.product28,BImages.product25],)
-
-                    /// Products
-                  ],
-                ),
-              ),  Padding(
-                padding: EdgeInsets.all(BSizes.defaultsSpace),
-                child: Column(
-                  children: [
-                    /// Brand
-                    BBrandShowcase(images: [BImages.product26,BImages.product28,BImages.product25],)
-
-                    /// Products
-                  ],
-                ),
-              ) , Padding(
-                padding: EdgeInsets.all(BSizes.defaultsSpace),
-                child: Column(
-                  children: [
-                    /// Brand
-                    BBrandShowcase(images: [BImages.product26,BImages.product28,BImages.product25],)
-
-                    /// Products
-                  ],
-                ),
-              )
+              BCategoryTab(),
+              BCategoryTab(),
+              BCategoryTab(),
+              BCategoryTab(),
+              BCategoryTab(),
+              BCategoryTab(),
             ],
           ),
         ),

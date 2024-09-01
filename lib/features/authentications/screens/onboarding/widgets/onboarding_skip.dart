@@ -20,7 +20,7 @@ class OnBoardingSkip extends StatelessWidget {
 
 
           },
-          child: Text("Skip"),
+          child: const Text("Skip"),
         )
 
       ///Dot Navigation SmoothPageIndicator

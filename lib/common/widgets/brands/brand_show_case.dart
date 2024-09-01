@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 
-import '../../../features/shop/screens/store/brand_card.dart';
+import 'brand_card.dart';
 import '../../../utils/constant/colors.dart';
 
 import '../../../utils/constant/sizes.dart';
@@ -28,6 +28,7 @@ class BBrandShowcase extends StatelessWidget {
           const BBrandCard(
           showBorder: false,
         ),
+        const SizedBox(height: BSizes.spaceBtwItems,),
 
         /// Brand Top 3 Product images
         Row(

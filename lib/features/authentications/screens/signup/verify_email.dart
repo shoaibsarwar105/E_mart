@@ -77,7 +77,7 @@ class VerifyEmailScreen extends StatelessWidget {
                         title: BText.yourAccountCreatedTitle,
                         subTitle: BText.yourAccountCreatedSubTitle,
                         onPressed: () {
-                          Get.to(LoginScreen());
+                          Get.to(const LoginScreen());
                         },
                       ));
                     },
