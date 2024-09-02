@@ -58,7 +58,8 @@ class HomeScreen extends StatelessWidget {
                         BHomeCategories()
                       ],
                     ),
-                  )
+                  ),
+                  SizedBox(height: BSizes.spaceBtwSections,)
                 ],
               ),
             ),

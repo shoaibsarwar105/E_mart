@@ -23,6 +23,7 @@ class BProductCardVertical extends StatelessWidget {
     return GestureDetector(
       onTap: () {},
       child: Container(
+
         width: 180,
         padding: const EdgeInsets.all(1),
         decoration: BoxDecoration(
@@ -82,19 +83,22 @@ class BProductCardVertical extends StatelessWidget {
             ///  -- Details
             const Padding(
               padding: EdgeInsets.only(left: BSizes.sm),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  BProductTitleText(
-                    title: 'Baby CARE Instruments',
-                    smallSize: true,
-                  ),
-                  SizedBox(
-                    height: BSizes.spaceBtwItems / 2,
-                  ),
-                  BBrandTitleWithVerifiedIcon(title: 'Brand Name', ),
+              child: SizedBox(width: double.infinity,
 
-                ],
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    BProductTitleText(
+                      title: 'Baby CARE Instruments  ',
+                      smallSize: true,
+                    ),
+                    SizedBox(
+                      height: BSizes.spaceBtwItems / 2,
+                    ),
+                    BBrandTitleWithVerifiedIcon(title: 'Brand Name', ),
+
+                  ],
+                ),
               ),
             ),
             const Spacer(),

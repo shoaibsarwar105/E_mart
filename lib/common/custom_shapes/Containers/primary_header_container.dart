@@ -6,17 +6,21 @@ import 'circular_container.dart';
 
 class BPrimaryHeaderContainer extends StatelessWidget {
   const BPrimaryHeaderContainer({
-    super.key, required this.child,
+    super.key,
+    required this.child,
   });
+
   final Widget child;
+
   @override
   Widget build(BuildContext context) {
-    return BCurvedEdgeWidget(child:  Container(
-      color: BColors.primary,
-      padding: const EdgeInsets.all(0),
-      child: SizedBox(height: 400,
+    return BCurvedEdgeWidget(
+      child: Container(
+        color: BColors.primary,
+        padding: const EdgeInsets.all(0),
         child: Stack(
           children: [
+            /// Background Custom Shapes
             Positioned(
                 top: -150,
                 right: -250,
@@ -33,6 +37,6 @@ class BPrimaryHeaderContainer extends StatelessWidget {
           ],
         ),
       ),
-    ),);
+    );
   }
 }

@@ -41,6 +41,10 @@ class BImages {
   static const String promoBanner3  = "assets/images/banners/promo_banner_3.jpg";
 
 
+  // Users
+  static const String user  = "assets/images/users/user.png";
+
+
 // --products
   static const String product1  = "assets/images/products/Product1.jpeg";
   static const String product2  = "assets/images/products/Product2.jpeg";
