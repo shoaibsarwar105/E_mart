@@ -13,7 +13,7 @@ class BRoundedImage extends StatelessWidget {
     this.applyImageRadius =true,
     this.border,
     this.backgroundColor,
-    this.fit = BoxFit.fill,
+    this.fit = BoxFit.contain,
     this.padding,
     this.isNetworkImage = false,
     this.onPressed,

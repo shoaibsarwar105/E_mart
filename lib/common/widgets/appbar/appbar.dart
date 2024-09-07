@@ -1,4 +1,6 @@
+import 'package:beautybonenza/utils/constant/colors.dart';
 import 'package:beautybonenza/utils/device/device-utility.dart';
+import 'package:beautybonenza/utils/helpers/helper_functions.dart';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -27,12 +29,13 @@ class BAppbar extends StatelessWidget implements PreferredSizeWidget {
       padding: const EdgeInsets.symmetric(horizontal: BSizes.md),
       child: AppBar(
           automaticallyImplyLeading: false,
-          leading: showBackArrow
+          leading:
+          showBackArrow
               ? IconButton(
                   onPressed: () {
                     Get.back();
                   },
-                  icon: const Icon(Iconsax.arrow_left))
+                  icon:  Icon(Iconsax.arrow_left,color: BHelperFunction.isDark(context)?BColors.white:BColors.black,))
               : leadingIcon != null
                   ? IconButton(
                       onPressed: () {

@@ -2,7 +2,9 @@ import 'package:beautybonenza/common/custom_shapes/Containers/primary_header_con
 import 'package:beautybonenza/common/widgets/appbar/appbar.dart';
 import 'package:beautybonenza/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:beautybonenza/common/widgets/text/section_heading.dart';
+import 'package:beautybonenza/features/personalization/screens/profile/profile.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../../common/widgets/list_tiles/user_profile_tile.dart';
@@ -31,7 +33,7 @@ class SettingsScreen extends StatelessWidget {
                 ),
 
                 /// -- User Profile card
-                const BUserProfileTile(),
+                 BUserProfileTile(onPressed: (){Get.to(const ProfileScreen());},),
                 const SizedBox(
                   height: BSizes.spaceBtwSections,
                 )

@@ -1,10 +1,12 @@
 import 'package:beautybonenza/common/custom_shapes/Containers/BRoundedContainer.dart';
 import 'package:beautybonenza/common/widgets/Images/b_rounded_image.dart';
 import 'package:beautybonenza/common/widgets/pricetitle/price_title.dart';
+import 'package:beautybonenza/features/shop/screens/product_details/profile_detail.dart';
 import 'package:beautybonenza/utils/constant/colors.dart';
 import 'package:beautybonenza/utils/constant/images.dart';
 import 'package:beautybonenza/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import '../../../../utils/constant/sizes.dart';
 import '../../../styles/shadows.dart';
@@ -21,7 +23,7 @@ class BProductCardVertical extends StatelessWidget {
 
     /// container with side padding ,color , edges, radius and shadow.
     return GestureDetector(
-      onTap: () {},
+      onTap: () {Get.to(const ProductDetailScreen());},
       child: Container(
 
         width: 180,
