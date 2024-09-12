@@ -4,8 +4,10 @@ import 'package:beautybonenza/features/shop/screens/product_details/widgets/prod
 import 'package:beautybonenza/features/shop/screens/product_details/widgets/product_detail_image_slider.dart';
 import 'package:beautybonenza/features/shop/screens/product_details/widgets/product_meta_data.dart';
 import 'package:beautybonenza/features/shop/screens/product_details/widgets/rating_share_widget.dart';
+import 'package:beautybonenza/features/shop/screens/product_reviews/product_reviews.dart';
 import 'package:beautybonenza/utils/constant/sizes.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:readmore/readmore.dart';
 
@@ -32,10 +34,10 @@ class ProductDetailScreen extends StatelessWidget {
               child: Column(
                 children: [
                   /// --Rating & share
-                  BRatingAndShare(),
+                  const BRatingAndShare(),
 
                   /// --Price ,title,stock ,& Brand
-                  BProductMetaData(),
+                  const BProductMetaData(),
 
                   /// --Attributes
                   const ProductAttributes(),
@@ -86,12 +88,23 @@ class ProductDetailScreen extends StatelessWidget {
                   ),
 
                   /// --Reviews
-                 const Divider(),
-                  const SizedBox(height: BSizes.spaceBtwItems,),
-                  Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  const Divider(),
+                  const SizedBox(
+                    height: BSizes.spaceBtwItems,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      BSectionHeading(title: "Reviews(99)",onPressed: (){},showActionButton:false ,),
-                      IconButton(onPressed: (){}, icon: const Icon(Iconsax.arrow_right_3))
+                      BSectionHeading(
+                        title: "Reviews(99)",
+                        onPressed: () {},
+                        showActionButton: false,
+                      ),
+                      IconButton(
+                          onPressed: () {
+                            Get.to(const ProductReviewsScreen());
+                          },
+                          icon: const Icon(Iconsax.arrow_right_3))
                     ],
                   ),
 

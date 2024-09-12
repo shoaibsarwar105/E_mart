@@ -40,6 +40,11 @@ class BImages {
   static const String promoBanner2  = "assets/images/banners/promo_banner_2.jpg";
   static const String promoBanner3  = "assets/images/banners/promo_banner_3.jpg";
 
+  // User reviews
+  static const String person1  = "assets/images/reviews/person1.jpeg";
+  static const String person2  = "assets/images/reviews/person2.jpeg";
+  static const String person3  = "assets/images/reviews/person3.jpeg";
+  static const String person4  = "assets/images/reviews/person4.jpeg";
 
   // Users
   static const String user  = "assets/images/users/user.png";
