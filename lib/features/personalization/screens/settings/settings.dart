@@ -2,6 +2,7 @@ import 'package:beautybonenza/common/custom_shapes/Containers/primary_header_con
 import 'package:beautybonenza/common/widgets/appbar/appbar.dart';
 import 'package:beautybonenza/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:beautybonenza/common/widgets/text/section_heading.dart';
+import 'package:beautybonenza/features/personalization/screens/address/address.dart';
 import 'package:beautybonenza/features/personalization/screens/profile/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -56,7 +57,7 @@ class SettingsScreen extends StatelessWidget {
                     icon: Iconsax.safe_home,
                     title: "My Addresses",
                     subTitle: "Set shopping delivery address",
-                    onTap: () {},
+                    onTap: () {Get.to(const UserAddressScreen());},
                   ),
                   BSettingMenuTile(
                     icon: Iconsax.shopping_cart,
