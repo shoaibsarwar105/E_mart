@@ -1,21 +1,32 @@
+import 'package:beautybonenza/features/shop/screens/cart/cart.dart';
+import 'package:beautybonenza/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../utils/constant/colors.dart';
 
 class BCartCounterIcon extends StatelessWidget {
   const BCartCounterIcon({
-    super.key, required this.onPressed, required this.iconColor ,
+    super.key,
+    required this.onPressed,
+    required this.iconColor,
+    this.counterBgColor,
+    this.counterTextColor,
   });
+
   final VoidCallback onPressed;
-  final Color iconColor;
+  final Color? iconColor, counterBgColor, counterTextColor;
 
   @override
   Widget build(BuildContext context) {
+    final dark = BHelperFunction.isDark(context);
     return Stack(children: [
       IconButton(
-          onPressed: onPressed,
-          icon:  Icon(
+          onPressed: () { Get.to(const CartScreen());
+
+          },
+          icon: Icon(
             Iconsax.shopping_bag,
             color: iconColor,
           )),
@@ -25,7 +36,7 @@ class BCartCounterIcon extends StatelessWidget {
             width: 18,
             height: 18,
             decoration: BoxDecoration(
-                color: BColors.black.withOpacity(0.5),
+                color: counterBgColor ?? (dark ? BColors.white : BColors.black),
                 borderRadius: BorderRadius.circular(100)),
             child: Center(
               child: Text(
@@ -33,11 +44,10 @@ class BCartCounterIcon extends StatelessWidget {
                 style: Theme.of(context)
                     .textTheme
                     .labelLarge!
-                    .apply(color: BColors.white,fontSizeFactor: 0.8),
+                    .apply(color: BColors.white, fontSizeFactor: 0.8),
               ),
             ),
-          )
-      )
+          ))
     ]);
   }
 }
