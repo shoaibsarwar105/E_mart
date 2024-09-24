@@ -24,14 +24,14 @@ final bool showAddRemoveButtons;
         return  Column(
           children: [
             /// Cart item
-            BCartItem(),
-          if(showAddRemoveButtons)  SizedBox(
+            const BCartItem(),
+          if(showAddRemoveButtons)  const SizedBox(
               height: BSizes.spaceBtwItems,
             ),
 
             /// Add Remove Buttons Row with total price
 
-            if(showAddRemoveButtons) Row(
+            if(showAddRemoveButtons) const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Row(

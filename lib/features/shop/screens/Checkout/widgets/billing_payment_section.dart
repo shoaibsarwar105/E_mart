@@ -1,4 +1,9 @@
+import 'package:beautybonenza/common/custom_shapes/Containers/BRoundedContainer.dart';
+import 'package:beautybonenza/common/widgets/text/section_heading.dart';
+import 'package:beautybonenza/utils/constant/colors.dart';
+import 'package:beautybonenza/utils/constant/images.dart';
 import 'package:beautybonenza/utils/constant/sizes.dart';
+import 'package:beautybonenza/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 
 class BBillingPaymentSection extends StatelessWidget {
@@ -6,86 +11,33 @@ class BBillingPaymentSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final dark = BHelperFunction.isDark(context);
     return Column(
       children: [
-        /// Subtotal
-        Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-              'Subtotal',
-              style: Theme.of(context).textTheme.bodyMedium,
-            ),
-            Text(
-              '\$245.0',
-              style: Theme.of(context).textTheme.bodyMedium,
-            ),
-
-
-          ],
+        BSectionHeading(
+          title: 'Payment Methods',
+          buttonTitle: 'Change',
+          onPressed: () {},
         ),
-        SizedBox(height: BSizes.spaceBtwItems/2,),
-
-        /// Shipping fee
-        Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-              'Shipping Fee',
-              style: Theme.of(context).textTheme.bodyMedium,
-            ),
-            Text(
-              '\$6.0',
-              style: Theme.of(context).textTheme.labelLarge,
-            ),
-
-
-          ],
+        const SizedBox(
+          height: BSizes.spaceBtwItems / 2,
         ),
-        SizedBox(height: BSizes.spaceBtwItems/2,),
-
-        /// Tax fee
-        Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        Row(
           children: [
-            Text(
-              'Tax Fee',
-              style: Theme.of(context).textTheme.bodyMedium,
+            BRoundedContainer(
+              width: 60,
+              height: 35,
+              backgroundColor: dark ? BColors.light : BColors.white,
+              padding: const EdgeInsets.all(BSizes.sm),
+              child: const Image(
+                image: AssetImage(BImages.masterCard),
+                fit: BoxFit.contain,
+              ),
             ),
-            Text(
-              '\$6.0',
-              style: Theme.of(context).textTheme.labelLarge,
-            ),
-
-
+            const SizedBox(width: BSizes.spaceBtwItems/2,),
+            Text('Master Card',style: Theme.of(context).textTheme.bodyLarge,),
           ],
-        ), SizedBox(height: BSizes.spaceBtwItems/2,),
-
-        /// Order Total
-        Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-              'Order Total ',
-              style: Theme.of(context).textTheme.bodyMedium,
-            ),
-            Text(
-              '\$6.0',
-              style: Theme.of(context).textTheme.titleMedium,
-            ),
-
-
-          ],
-        ),
-
-
-
-
-
-
-
-
-
-
-
-
-
+        )
       ],
     );
   }

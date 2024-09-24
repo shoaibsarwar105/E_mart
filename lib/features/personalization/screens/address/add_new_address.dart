@@ -9,91 +9,91 @@ class AddNewAddressScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: BAppbar(
+      appBar: const BAppbar(
         showBackArrow: true,
         title: Text('Add New Address'),
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(BSizes.defaultsSpace),
+          padding: const EdgeInsets.all(BSizes.defaultsSpace),
           child: Form(
             child: Column(
               children: [
                 TextFormField(
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                       prefixIcon: Icon(Iconsax.user), labelText: 'Name'),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: BSizes.spaceBtwInputFields,
                 ),
                 TextFormField(
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                       prefixIcon: Icon(Iconsax.mobile),
                       labelText: 'Phone Number'),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: BSizes.spaceBtwInputFields,
                 ),
                 Row(
                   children: [
                     Expanded(
                       child: TextFormField(
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                             prefixIcon: Icon(Iconsax.building_31),
                             labelText: 'Street'),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: BSizes.spaceBtwInputFields,
                     ),
                     Expanded(
                       child: TextFormField(
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                             prefixIcon: Icon(Iconsax.code),
                             labelText: 'Postal Code'),
                       ),
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: BSizes.spaceBtwInputFields,
                 ),
                 Row(
                   children: [
                     Expanded(
                       child: TextFormField(
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                             prefixIcon: Icon(Iconsax.building),
                             labelText: 'City'),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: BSizes.spaceBtwInputFields,
                     ),
                     Expanded(
                       child: TextFormField(
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                             prefixIcon: Icon(Iconsax.activity),
                             labelText: 'State'),
                       ),
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: BSizes.spaceBtwInputFields,
                 ),
                 TextFormField(
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                       prefixIcon: Icon(Iconsax.global), labelText: 'Country'),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: BSizes.defaultsSpace,
                 ),
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {},
-                    child: Text('Save'),
+                    child: const Text('Save'),
                   ),
                 )
               ],

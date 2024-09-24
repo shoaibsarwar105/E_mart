@@ -17,11 +17,11 @@ class UserAddressScreen extends StatelessWidget {
         onPressed: () {
           Get.to(const AddNewAddressScreen());
         },
-        child: Icon(
+        backgroundColor: BColors.primary,
+        child: const Icon(
           Iconsax.add,
           color: BColors.white,
         ),
-        backgroundColor: BColors.primary,
       ),
       appBar: BAppbar(
         showBackArrow: true,
@@ -30,7 +30,7 @@ class UserAddressScreen extends StatelessWidget {
           style: Theme.of(context).textTheme.headlineMedium,
         ),
       ),
-      body: SingleChildScrollView(
+      body: const SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.all(BSizes.defaultsSpace),
           child: Column(

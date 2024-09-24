@@ -85,4 +85,17 @@ class BImages {
   static const String product32  = "assets/images/products/Product32.webp";
   static const String product33  = "assets/images/products/Product33.webp";
 
+  // -- Payment methods
+
+  static const String applePay  = "assets/icons/paymentIcons/apple-pay.png";
+  static const String googlePay = "assets/icons/paymentIcons/googlePay.jpeg";
+  static const String creditCard  = "assets/icons/paymentIcons/credit card.png";
+  static const String masterCard  = "assets/icons/paymentIcons/mastercard.jpeg";
+  static const String payPal = "assets/icons/paymentIcons/paypal.png";
+  static const String visa  = "assets/icons/paymentIcons/visa.jpeg";
+  static const String payStack  = "assets/icons/paymentIcons/paystack.png";
+  static const String paytm = "assets/icons/paymentIcons/paytm.png";
+  static const String successfulPaymentIcon  = "assets/icons/paymentIcons/successfulpaymenticon.jpg";
+
+
 }

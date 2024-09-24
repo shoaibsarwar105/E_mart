@@ -1,8 +1,5 @@
-import 'package:beautybonenza/common/custom_shapes/Containers/BRoundedContainer.dart';
 import 'package:beautybonenza/common/widgets/text/section_heading.dart';
-import 'package:beautybonenza/utils/constant/colors.dart';
 import 'package:beautybonenza/utils/constant/sizes.dart';
-import 'package:beautybonenza/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 
 class BBillingAddressSection extends StatelessWidget {
@@ -10,28 +7,57 @@ class BBillingAddressSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark = BHelperFunction.isDark(context);
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         BSectionHeading(
-          title: 'Payment Methods',
+          title: 'Shipping Address',
           buttonTitle: 'Change',
           onPressed: () {},
         ),
-        SizedBox(
+        Text(
+          'Dream Life',
+          style: Theme.of(context).textTheme.bodyLarge,
+        ), const SizedBox(
           height: BSizes.spaceBtwItems / 2,
         ),
         Row(
           children: [
-            BRoundedContainer(
-              width: 60,
-              height: 35,
-              backgroundColor: dark ? BColors.light : BColors.white,
-              padding: EdgeInsets.all(BSizes.sm),
-
-            )
+            const Icon(
+              Icons.phone,
+              color: Colors.grey,
+              size: 16,
+            ),
+            const SizedBox(
+              width: BSizes.spaceBtwItems,
+            ),
+            Text(
+              "+923084739991",
+              style: Theme.of(context).textTheme.bodyMedium,
+            ),
           ],
-        )
+        ),
+        const SizedBox(
+          height: BSizes.spaceBtwItems / 2,
+        ),
+        Row(
+          children: [
+            const Icon(
+              Icons.location_history,
+              color: Colors.grey,
+              size: 16,
+            ),
+            const SizedBox(
+              width: BSizes.spaceBtwItems,
+            ),
+            Expanded(
+                child: Text(
+              "Muslim Town  ,Punjab 5555,Pakistan",
+              style: Theme.of(context).textTheme.bodyMedium,
+              softWrap: true,
+            )),
+          ],
+        ),
       ],
     );
   }

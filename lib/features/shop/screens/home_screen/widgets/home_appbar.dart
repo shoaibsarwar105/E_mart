@@ -1,6 +1,4 @@
-import 'package:beautybonenza/features/shop/screens/cart/cart.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 import '../../../../../common/widgets/appbar/appbar.dart';
 import '../../../../../common/widgets/products.cart/Cart_menu_icon.dart';

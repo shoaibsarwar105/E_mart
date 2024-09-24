@@ -19,7 +19,7 @@ class BCouponCode extends StatelessWidget {
     return BRoundedContainer(
       showBorder: true,
       backgroundColor: dark ? BColors.dark : BColors.white,
-      padding: EdgeInsets.only(
+      padding: const EdgeInsets.only(
           top: BSizes.sm,
           bottom: BSizes.sm,
           right: BSizes.sm,
@@ -29,7 +29,7 @@ class BCouponCode extends StatelessWidget {
           /// --TextField
           Flexible(
             child: TextFormField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: 'Have a promo code? Enter here.',
                 border: InputBorder.none,
                 focusedBorder: InputBorder.none,
@@ -55,7 +55,7 @@ class BCouponCode extends StatelessWidget {
 
 
                 ),
-                child: Text('Apply'),
+                child: const Text('Apply'),
               ))
         ],
       ),

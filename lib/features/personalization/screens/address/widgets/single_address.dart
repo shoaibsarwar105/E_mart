@@ -15,7 +15,7 @@ class BSingleAddress extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = BHelperFunction.isDark(context);
     return BRoundedContainer(
-      padding: EdgeInsets.all(BSizes.md),
+      padding: const EdgeInsets.all(BSizes.md),
       width: double.infinity,
       showBorder: true,
       backgroundColor: selectedAddress ? BColors.primary : Colors.transparent,
@@ -24,7 +24,7 @@ class BSingleAddress extends StatelessWidget {
           : dark
               ? BColors.darkerGrey
               : BColors.grey,
-      margin: EdgeInsets.only(bottom: BSizes.spaceBtwItems),
+      margin: const EdgeInsets.only(bottom: BSizes.spaceBtwItems),
       child: Stack(
         children: [
           Positioned(
@@ -46,19 +46,19 @@ class BSingleAddress extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
                 style: Theme.of(context).textTheme.titleLarge,
               ),
-              SizedBox(height: BSizes.sm/2,) ,
-              Text(
+              const SizedBox(height: BSizes.sm/2,) ,
+              const Text(
                 '+923084739991',
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
 
               ),
-              SizedBox(height: BSizes.sm/2,), Text(
+              const SizedBox(height: BSizes.sm/2,), const Text(
                 'Behind Grid Station Muslim Town Street no. 1,House No. 3',
 
                 softWrap: true,
               ),
-              SizedBox(height: BSizes.sm/2,)
+              const SizedBox(height: BSizes.sm/2,)
             ],
           )
         ],

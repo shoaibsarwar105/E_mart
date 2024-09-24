@@ -21,8 +21,8 @@ class CartScreen extends StatelessWidget {
           style: Theme.of(context).textTheme.headlineSmall,
         ),
       ),
-      body: Padding(
-          padding: const EdgeInsets.all(BSizes.defaultsSpace),
+      body: const Padding(
+          padding: EdgeInsets.all(BSizes.defaultsSpace),
           child:
 
               /// -- Items in cart
