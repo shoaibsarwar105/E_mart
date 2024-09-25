@@ -4,6 +4,7 @@ import 'package:beautybonenza/common/widgets/list_tiles/settings_menu_tile.dart'
 import 'package:beautybonenza/common/widgets/text/section_heading.dart';
 import 'package:beautybonenza/features/personalization/screens/address/address.dart';
 import 'package:beautybonenza/features/personalization/screens/profile/profile.dart';
+import 'package:beautybonenza/features/shop/screens/orders/order.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -69,7 +70,7 @@ class SettingsScreen extends StatelessWidget {
                     icon: Iconsax.bag_tick,
                     title: "My Orders",
                     subTitle: "In-process and Completed orders.",
-                    onTap: () {},
+                    onTap: () {Get.to(OrderScreen()); },
                   ),
                   BSettingMenuTile(
                     icon: Iconsax.bank,
