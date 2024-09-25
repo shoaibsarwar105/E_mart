@@ -112,6 +112,8 @@ class BProductCardVertical extends StatelessWidget {
                   padding: EdgeInsets.only(left: 8.0),
                   child: BProductPriceText(price: '35.5'),
                 ),
+
+                /// Add to Card
                 Container(
                   decoration: const BoxDecoration(
                       color: BColors.dark,

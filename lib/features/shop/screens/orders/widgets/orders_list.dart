@@ -17,10 +17,10 @@ class BOrderListItems extends StatelessWidget {
     shrinkWrap: true,
       itemCount: 10,
 
-      separatorBuilder: (_,__)=>SizedBox(height: BSizes.spaceBtwItems,),
+      separatorBuilder: (_,__)=>const SizedBox(height: BSizes.spaceBtwItems,),
       itemBuilder:(_,index) => BRoundedContainer(
         showBorder: true,
-        padding: EdgeInsets.all(BSizes.md),
+        padding: const EdgeInsets.all(BSizes.md),
         backgroundColor: dark ? BColors.dark : BColors.light,
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -29,8 +29,8 @@ class BOrderListItems extends StatelessWidget {
             Row(
               children: [
                 /// 1- icon
-                Icon(Iconsax.ship),
-                SizedBox(
+                const Icon(Iconsax.ship),
+                const SizedBox(
                   width: BSizes.spaceBtwItems / 2,
                 ),
 
@@ -55,10 +55,10 @@ class BOrderListItems extends StatelessWidget {
                   ),
                 ),
                 /// 3 - Icon
-                IconButton(onPressed: (){}, icon: Icon(Iconsax.arrow_right_34,size: BSizes.iconSm,))
+                IconButton(onPressed: (){}, icon: const Icon(Iconsax.arrow_right_34,size: BSizes.iconSm,))
               ],
             ),
-            SizedBox(height: BSizes.spaceBtwItems,),
+            const SizedBox(height: BSizes.spaceBtwItems,),
 
             /// --Row 2
             Row(
@@ -67,8 +67,8 @@ class BOrderListItems extends StatelessWidget {
                   child: Row(
                     children: [
                       /// 1- icon
-                      Icon(Iconsax.tag),
-                      SizedBox(
+                      const Icon(Iconsax.tag),
+                      const SizedBox(
                         width: BSizes.spaceBtwItems / 2,
                       ),
 
@@ -100,8 +100,8 @@ class BOrderListItems extends StatelessWidget {
                   child: Row(
                     children: [
                       /// 1- icon
-                      Icon(Iconsax.calendar),
-                      SizedBox(
+                      const Icon(Iconsax.calendar),
+                      const SizedBox(
                         width: BSizes.spaceBtwItems / 2,
                       ),
 

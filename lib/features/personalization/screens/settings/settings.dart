@@ -70,7 +70,7 @@ class SettingsScreen extends StatelessWidget {
                     icon: Iconsax.bag_tick,
                     title: "My Orders",
                     subTitle: "In-process and Completed orders.",
-                    onTap: () {Get.to(OrderScreen()); },
+                    onTap: () {Get.to(const OrderScreen()); },
                   ),
                   BSettingMenuTile(
                     icon: Iconsax.bank,
