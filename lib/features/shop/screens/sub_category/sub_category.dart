@@ -48,6 +48,46 @@ class SubCategoriesSection extends StatelessWidget {
 
 
 
+              ],),
+              const SizedBox(height: BSizes.spaceBtwSections,),
+
+              /// 2- sub categories
+              Column(children: [
+                /// heading
+                BSectionHeading(title: 'Watch Items',onPressed: (){},),
+                const SizedBox(height: BSizes.spaceBtwItems /2 ,),
+
+
+                SizedBox(height: 120,
+                  child: ListView.separated(itemCount: 4,
+                    scrollDirection: Axis.horizontal,
+
+                      separatorBuilder: (context,index)=>const SizedBox(width: BSizes.spaceBtwItems,),
+                      itemBuilder: (context,index)=> const BProductCardHorizontal( )),
+                )
+
+
+
+              ],),
+              const SizedBox(height: BSizes.spaceBtwSections,),
+
+              /// 3- sub categories
+              Column(children: [
+                /// heading
+                BSectionHeading(title: 'Electronics',onPressed: (){},),
+                const SizedBox(height: BSizes.spaceBtwItems /2 ,),
+
+
+                SizedBox(height: 120,
+                  child: ListView.separated(itemCount: 4,
+                    scrollDirection: Axis.horizontal,
+
+                      separatorBuilder: (context,index)=>const SizedBox(width: BSizes.spaceBtwItems,),
+                      itemBuilder: (context,index)=> const BProductCardHorizontal( )),
+                )
+
+
+
               ],)
 
 

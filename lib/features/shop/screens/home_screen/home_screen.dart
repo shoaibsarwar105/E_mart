@@ -1,4 +1,5 @@
 import 'package:beautybonenza/common/widgets/products/products_cards/product_card_vertical.dart';
+import 'package:beautybonenza/features/shop/screens/all_products/all_products.dart';
 import 'package:beautybonenza/features/shop/screens/home_screen/widgets/home_appbar.dart';
 import 'package:beautybonenza/features/shop/screens/home_screen/widgets/home_categories.dart';
 import 'package:beautybonenza/features/shop/screens/home_screen/widgets/promo_slider.dart';
@@ -6,6 +7,7 @@ import 'package:beautybonenza/utils/constant/images.dart';
 import 'package:beautybonenza/utils/constant/sizes.dart';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import '../../../../common/custom_shapes/Containers/primary_header_container.dart';
 import '../../../../common/custom_shapes/Containers/search_Container.dart';
 import '../../../../common/widgets/layouts/grid_layout.dart';
@@ -80,7 +82,7 @@ class HomeScreen extends StatelessWidget {
                   ),
 
                   ///-- heading
-                 BSectionHeading(title: 'Popular Products',onPressed: (){},),
+                 BSectionHeading(title: 'Popular Products',onPressed: (){Get.to(const AllProducts());},),
                   const SizedBox(height: BSizes.spaceBtwItems,),
 
                   /// -- popular products--

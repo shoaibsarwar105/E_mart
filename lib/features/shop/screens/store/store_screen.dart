@@ -4,12 +4,15 @@ import 'package:beautybonenza/common/widgets/layouts/grid_layout.dart';
 import 'package:beautybonenza/common/widgets/products.cart/Cart_menu_icon.dart';
 
 import 'package:beautybonenza/common/widgets/text/section_heading.dart';
+import 'package:beautybonenza/features/shop/screens/brand/all_brands.dart';
+import 'package:beautybonenza/features/shop/screens/brand/brand_products.dart';
 import 'package:beautybonenza/features/shop/screens/store/widgets/category_tab.dart';
 
 import 'package:beautybonenza/utils/constant/sizes.dart';
 import 'package:beautybonenza/utils/helpers/helper_functions.dart';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../../common/widgets/appbar/tabbar.dart';
 import '../../../../utils/constant/colors.dart';
@@ -72,7 +75,7 @@ class StoreScreen extends StatelessWidget {
                       BSectionHeading(
                         title: 'Featured Brands',
                         showActionButton: true,
-                        onPressed: () {},
+                        onPressed: () {Get.to(const AllBrandsScreen());},
                       ),
                       const SizedBox(
                         height: BSizes.spaceBtwItems / 1.5,
@@ -81,8 +84,8 @@ class StoreScreen extends StatelessWidget {
                           itemCount: 4,
                           mainAxisExtent: 80,
                           itemBuilder: (_, index) {
-                            return const BBrandCard(
-                              showBorder: true,
+                            return  BBrandCard(
+                              showBorder: true,onTap: (){Get.to(const BrandProducts());},
                             );
                           })
                     ],
